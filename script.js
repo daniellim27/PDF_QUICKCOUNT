@@ -97,36 +97,37 @@ votes: parseInt(party.getElementsByClassName('calculator-textinput2')[0].value)
         myChart.update();
     } }
 
-function addParty() {
-    console.log('addParty clicked');
+    function addParty() {
+        console.log('addParty clicked');
     
-    const newParty = document.createElement('div');
-    newParty.classList.add('party');
-    newParty.innerHTML = `
-        <label for="partyName" class="calculator-text05">
-            Party Name :
-        </label>
-        <input
-            type="text"
-            id="partyName_${document.getElementsByClassName('party').length + 1}"
-            required=""
-            placeholder="Input The Party Name"
-            class="calculator-textinput1"
-        />
-        <label for="voteCount">Vote:&nbsp;</label>
-        <input
-            type="number"
-            id="voteCount_${document.getElementsByClassName('party').length + 1}"
-            min="0"
-            required=""
-            placeholder="Input The Vote"
-            class="calculator-textinput2"
-        />
-    `;
-
-    document.getElementById('partyInputs').appendChild(newParty);
-}
-
+        const newParty = document.createElement('div');
+        newParty.classList.add('party');
+        newParty.style.marginTop = '10px'; 
+    
+        newParty.innerHTML = `
+            <label for="partyName" class="calculator-text05">
+                Party Name :
+            </label>
+            <input
+                type="text"
+                id="partyName_${document.getElementsByClassName('party').length + 1}"
+                required=""
+                placeholder="Input The Party Name"
+                class="calculator-textinput1"
+            />
+            <label for="voteCount"><br>Vote:&nbsp;</label>
+            <input
+                type="number"
+                id="voteCount_${document.getElementsByClassName('party').length + 1}"
+                min="0"
+                required=""
+                placeholder="Input The Vote"
+                class="calculator-textinput2"
+            />
+        `;
+    
+        document.getElementById('partyInputs').appendChild(newParty);
+    }
 
 // Function to generate a random color (for demonstration purposes)
 function getRandomColor() {
