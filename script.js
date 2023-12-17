@@ -97,7 +97,7 @@ votes: parseInt(party.getElementsByClassName('calculator-textinput2')[0].value)
         myChart.update();
     } }
 
-    function addParty() {
+function addParty() {
         console.log('addParty clicked');
     
         const newParty = document.createElement('div');
